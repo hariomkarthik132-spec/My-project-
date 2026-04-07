@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Knowledge Project</title>
+  <title>Security Tool</title>
 </head>
 <body style="background:black; color:lime; text-align:center;">
-  <h1>Knowledge Project 🚀</h1>
-  <p>Welcome to my website</p>
-  <button>Click Me</button>
+
+  <h1>🔐 Password Checker</h1>
+
+  <input type="text" id="pass" placeholder="Enter password">
+  <button onclick="check()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      let p = document.getElementById("pass").value;
+
+      if (p.length < 6) {
+        document.getElementById("result").innerHTML = "Weak Password ❌";
+      } else {
+        document.getElementById("result").in8nerHTML = "Strong Password ✅";
+      }
+    }
+  </script>
+
 </body>
 </html>
