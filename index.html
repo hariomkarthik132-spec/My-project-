@@ -55,9 +55,7 @@
 
     <div class="box">
         <input type="text" id="inputText" placeholder="Enter text here">
-
         <button onclick="runTool()">Run Tool</button>
-
         <div id="output"></div>
     </div>
 
@@ -70,8 +68,7 @@
                 return;
             }
 
-            let result = "✔ You entered: " + text;
-            document.getElementById("output").innerText = result;
+            document.getElementById("output").innerText = "✔ You entered: " + text;
         }
     </script>
 
