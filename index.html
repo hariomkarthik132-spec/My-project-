@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Knowledge Project</title>
+
+  <!-- सरल स्टाइलिंग – अपनी पसंद के अनुसार बदलें -->
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:#f4f7fa;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+      text-align:center;
+    }
+    h1{
+      font-size:2.5rem;
+      margin-bottom:0.5rem;
+    }
+    button{
+      padding:0.75rem 1.5rem;
+      font-size:1.1rem;
+      background:#007bff;
+      color:#fff;
+      border:none;
+      border-radius:0.35rem;
+      cursor:pointer;
+      transition:background .15s;
+    }
+    button:hover{
+      background:#0056b3;
+    }
+  </style>
 </head>
-<body style="background:black; color:lime; text-align:center;">
+<body>
+
   <h1>Knowledge Project 🚀</h1>
   <p>Welcome to my website</p>
-  <button>Click Me</button>
+
+  <button id="clickMeBtn">Click Me</button>
+
+  <!-- जावास्क्रिप्ट – एक साधारण डेमो -->
+  <script>
+    document.getElementById('clickMeBtn').addEventListener('click', function(){
+      alert('आपने बटन पर क्लिक किया!');   /* यहाँ आप कोई भी कार्य कर सकते हैं */
+    });
+  </script>
 </body>
 </html>
