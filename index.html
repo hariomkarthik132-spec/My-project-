@@ -1,1 +1,79 @@
-Hello GitHub
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tool</title>
+
+    <style>
+        body {
+            background: #0d0d0d;
+            color: #00ff41;
+            font-family: monospace;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .box {
+            border: 1px solid #00ff41;
+            padding: 15px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            background: black;
+            color: #00ff41;
+            border: 1px solid #00ff41;
+        }
+
+        button:hover {
+            background: #00ff41;
+            color: black;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 15px;
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🔧 My Tool Panel</h1>
+
+    <div class="box">
+        <input type="text" id="inputText" placeholder="Enter text here">
+
+        <button onclick="runTool()">Run Tool</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function runTool() {
+            let text = document.getElementById("inputText").value;
+
+            if (text === "") {
+                document.getElementById("output").innerText = "❌ Enter some text!";
+                return;
+            }
+
+            let result = "✔ You entered: " + text;
+            document.getElementById("output").innerText = result;
+        }
+    </script>
+
+</body>
+</html>
